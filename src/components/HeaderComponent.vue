@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="HeaderComponent">
     <img class="logo" src="../assets/logo.png" alt="logo">
     <ul>
       <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">Home</a></li>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'HeaderView',
+  name: 'HeaderComponent',
   props: {
     msg: String
   }
@@ -21,7 +21,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
+.HeaderComponent {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +44,7 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+  font-size: 18px;
 }
 a {
   color: #ffffff;
