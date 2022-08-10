@@ -23,8 +23,8 @@
         <h2>ELSEWHERE</h2>
         <div>
           <img class="icon" src="../assets/icon_wechat.png">
-          <img class="icon" src="../assets/icon_wechat.png">
-          <img class="icon" src="../assets/icon_wechat.png">
+          <img class="icon" src="../assets/icon_qq.png">
+          <img class="icon" src="../assets/icon_weibo.png">
         </div>
       </div>
     </div>
@@ -42,12 +42,14 @@
     justify-content: space-around;
     align-items: start;
     background-color: #0A0B0C;
-    height: 200px;
+    height: 300px;
   }
 
   .icon {
-    height: 25px;
-    margin: 10px;
+    height: 35px;
+    margin:15px;
+    margin-top: 0px;
+    margin-right:auto;
   }
 
   ul {
@@ -55,6 +57,7 @@
 
   h2 {
     margin-left: 40px;
+    margin-top: 60px;
     font-size: 26px;
     color: white;
     text-align: left;
