@@ -1,12 +1,21 @@
 <template>
   <div class="HeaderComponent">
     <img class="logo" src="../assets/logo.png" alt="logo">
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">Home</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">Showcase</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">About</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">Other</a></li>
-    </ul>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/example">Example</router-link>
+
+      <el-select v-model="value" placeholder="Language">
+        <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+        </el-option>
+      </el-select>
+    </nav>
   </div>
 </template>
 
@@ -15,6 +24,18 @@ export default {
   name: 'HeaderComponent',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      options: [{
+        value: 'Chinese',
+        label: '中文'
+      }, {
+        value: 'English',
+        label: 'English'
+      }],
+      value: ''
+    }
   }
 }
 </script>
@@ -27,6 +48,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 50px;
+  background-color: #151719;
 }
 
 .logo {
@@ -37,17 +59,15 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
+router-link {
+  margin: 10px;
   font-size: 18px;
 }
+
 a {
   color: #ffffff;
+  margin: 0 15px;
   text-decoration: none;
 }
+
 </style>

@@ -19,9 +19,9 @@
           <li>changnaxin1991@gmail.com</li>
         </ul>
       </div>
-      <div>
+      <div class="col_center">
         <h2>ELSEWHERE</h2>
-        <div>
+        <div class="row_center" style="margin-left: 30px">
           <img class="icon" src="../assets/icon_wechat.png">
           <img class="icon" src="../assets/icon_qq.png">
           <img class="icon" src="../assets/icon_weibo.png">
@@ -47,12 +47,7 @@
 
   .icon {
     height: 35px;
-    margin:15px;
-    margin-top: 0px;
-    margin-right:auto;
-  }
-
-  ul {
+    margin: 10px;
   }
 
   h2 {
@@ -68,6 +63,7 @@
     list-style: none;
     font-size: 18px;
     color: white;
+    margin: 5px 0;
   }
 
 </style>
