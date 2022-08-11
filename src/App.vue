@@ -1,14 +1,13 @@
 <template>
-  <div id="bg">
+  <div id="app">
     <HeaderComponent msg="Welcome to Your Vue.js App"/>
-    <HomePage style="height: 800px"></HomePage>
-    <FooterComponent></FooterComponent>
+    <router-view></router-view>
+    <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
-import HomePage from './page/HomePage.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
 export default {
@@ -16,21 +15,14 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent,
-    HomePage
   },
   data() {
     return {
-      contentHeight: 1000,
     }
   }
 }
 </script>
 
-
 <style>
-  @import "css/global.css";
-  #bg {
-    height: 1250px;
-    background-color: #151719;
-  }
+  @import "../static/css/global.css";
 </style>

@@ -1,4 +1,4 @@
-# nana_homepage
+# learn
 
 ## Project setup
 ```
