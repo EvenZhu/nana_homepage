@@ -2,10 +2,10 @@
   <div class="HomeView col_center">
     <div class="row introduce">
       <div class="left col_center">
-        <h1>Who am I?</h1>
-        <p>A houston-base designer and illustrator</p>
-        <p>focusing on visual design, web interactions,</p>
-        <p>brand development, and tangible goods.</p>
+        <h1>{{ $t("m.who") }}</h1>
+        <p>{{ $t("m.introduce[0]") }}</p>
+        <p>{{ $t("m.introduce[1]") }}</p>
+        <p>{{ $t("m.introduce[2]") }}</p>
       </div>
       <img class="art_img" src="../assets/icon_head.png" alt="logo">
     </div>

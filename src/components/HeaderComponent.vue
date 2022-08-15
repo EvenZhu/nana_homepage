@@ -36,6 +36,20 @@ export default {
       }],
       value: ''
     }
+  },
+  watch: {
+    value: function(newValue, oldValue) {
+      console.log(newValue + "-" + oldValue);
+      if (newValue == 'English'){
+        this.lang='en';
+        localStorage.setItem("locale",this.lang)
+        this.$i18n.locale = this.lang;
+      }else {
+        this.lang="zh";
+        localStorage.setItem("locale",this.lang)
+        this.$i18n.locale = this.lang;
+      }
+    }
   }
 }
 </script>
