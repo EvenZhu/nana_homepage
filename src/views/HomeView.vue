@@ -9,11 +9,11 @@
       </div>
       <img class="art_img" src="../assets/icon_head.png" alt="logo">
     </div>
-<!--    introduce    -->
+    <!--    introduce    -->
       <div class="row_center bg_text_view">
         <h1 class="bg_text">A houston-base designer and illustrator focusing on visual design, web interactions</h1>
       </div>
-<!--   Work with me   -->
+    <!--   Work with me   -->
     <div class="row_center work">
       <img class="mine_img" src="../assets/icon_wechat.png">
       <div style="margin-right: 150px">
@@ -34,7 +34,8 @@
         <p>I enjoy being on the</p>
       </div>
     </div>
-<!--  THE SEMPLICE SHOWCAS  -->
+
+    <!--  THE SEMPLICE SHOWCAS  -->
     <div class="line_view">
       <p>THE SEMPLICE SHOWCAS</p>
       <hr>
@@ -50,22 +51,33 @@
         </el-button>
       </a>
     </div>
+    <div class="footer">
+    <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
+  </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: "HomeView",
-  methods: {
-    test() {
-      console.log("到顶部");
-      this.$refs.home.scrollTop = 0
+  import FooterComponent from '../components/FooterComponent.vue'
+  export default {
+    name: "HomeView",
+    components:{
+      FooterComponent
+    },
+    methods: {
+      test() {
+        console.log("到顶部");
+        this.$refs.home.scrollTop = 0
+      }
     }
-  }
 }
 </script>
 
 <style scoped>
+  .footer{
+    margin-right: -170px;
+    margin-left: -170px;
+  }
   .HomeView {
     margin-left: 10%;
     width: 80%;
@@ -126,7 +138,6 @@ export default {
     justify-content: end;
     margin-bottom: 100px;
   }
-
   h1 {
     color: white;
     font-size: 74px;
