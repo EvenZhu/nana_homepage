@@ -36,6 +36,40 @@
         <div>
             <el-link href="https://cn.vuejs.org/guide/introduction.html" target="_blank">Vue.js</el-link>
         </div>
+        <el-switch
+            v-model="value"
+            active-color="#13ce66"
+            inactive-color="#ff4949">
+        </el-switch>
+        <el-time-picker
+                v-model="value1"
+                :picker-options="{
+      selectableRange: '18:30:00 - 20:30:00'
+    }"
+                placeholder="任意时间点">
+        </el-time-picker>
+        <el-time-picker
+                arrow-control
+                v-model="value2"
+                :picker-options="{
+                selectableRange: '18:30:00 - 20:30:00'
+    }"
+                placeholder="任意时间点">
+        </el-time-picker>
+        <div class="block">
+            <span class="demonstration">区分颜色</span>
+            <el-rate
+                    v-model="value1"
+                    :colors="colors">
+
+            </el-rate>
+        </div>
+        <el-rate
+                v-model="value"
+                show-text>
+        </el-rate>
+        <el-color-picker v-model="color"></el-color-picker>
+        <el-skeleton :rows="6" animated/>
     </div>
 </template>
 
@@ -43,26 +77,14 @@
     export default {
         name: 'ExampleView',
         data() {
-          return {
-
-            options: [{
-              value: '选项1',
-              label: '黄金糕'
-            }, {
-              value: '选项2',
-              label: '双皮奶'
-            }, {
-              value: '选项3',
-              label: '蚵仔煎'
-            }, {
-              value: '选项4',
-              label: '龙须面'
-            }, {
-              value: '选项5',
-              label: '北京烤鸭'
-            }],
-            value: ''
-          }
+            return {
+                value:null,
+                value1: null,
+                value2: new Date(2016, 9, 10, 18, 40),
+                value3: new Date(2016, 9, 10, 18, 40),
+                colors:['#99A9BF', '#F7BA2A', '#FF9900'],
+                color:'#409EFF'
+            }
         }
     };
 </script>
