@@ -13,7 +13,7 @@
         <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
       </div>
       <!--   Work with me   -->
-      <div class="row_center work">
+      <div class="row work">
         <img class="mine_img" src="../assets/head.png">
         <div style="margin-right: 150px">
           <h1>{{ t("work") }}</h1>
