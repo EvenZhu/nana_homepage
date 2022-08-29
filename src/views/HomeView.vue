@@ -35,9 +35,28 @@
       </div>
       <h1>{{ t("proudly") }}</h1>
       <router-link to="/show_case">{{ t("see") }}</router-link>
-      <div class="my_works">
-        <p style="color: burlywood">这里放设计图</p>
-      </div>
+      <el-carousel height="1000px" direction="horizontal" :autoplay="true" interval="2000" loop="true">
+        <el-carousel-item  v-for="item in 3" :key="item" >
+      <el-row :gutter="20">
+        <el-col :span="6"><div class="grid-content bg-purple">
+          <img  height="180" class="art_img_img" src="../assets/auto.png">
+        </div>
+        </el-col>
+        <el-col :span="6"><div class="grid-content bg-purple">
+          <img  height="180" class="art_img_img" src="../assets/auto.png">
+
+        </div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple">
+          <img  height="180" class="art_img_img" src="../assets/auto.png">
+
+        </div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple">
+          <img  height="180" class="art_img_img" src="../assets/auto.png">
+
+        </div></el-col>
+      </el-row>
+        </el-carousel-item>
+      </el-carousel>
       <div class="top_button">
         <a href="/#">
           <el-button icon="el-icon-top" circle>
