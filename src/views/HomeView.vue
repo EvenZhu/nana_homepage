@@ -35,25 +35,15 @@
       </div>
       <h1>{{ t("proudly") }}</h1>
       <router-link to="/show_case">{{ t("see") }}</router-link>
-      <el-carousel height="1000px" direction="horizontal" :autoplay="true" interval="2000" loop="true">
+
+      <el-carousel height="200px"  type="card"  direction="horizontal" :autoplay="true" interval="2000" loop="true">
         <el-carousel-item  v-for="item in 3" :key="item" >
-      <el-row :gutter="20">
-        <el-col :span="6"><div class="grid-content bg-purple">
-          <img  height="180" class="art_img_img" src="../assets/auto.png">
-        </div>
-        </el-col>
-        <el-col :span="6"><div class="grid-content bg-purple">
-          <img  height="180" class="art_img_img" src="../assets/auto.png">
+          <el-row :gutter="10">
+            <el-col :span="6"><div class="grid-content bg-purple">
+              <img  height="180" class="art_img_img" src="../assets/auto.png">
+            </div>
+            </el-col>
 
-        </div></el-col>
-        <el-col :span="6"><div class="grid-content bg-purple">
-          <img  height="180" class="art_img_img" src="../assets/auto.png">
-
-        </div></el-col>
-        <el-col :span="6"><div class="grid-content bg-purple">
-          <img  height="180" class="art_img_img" src="../assets/auto.png">
-
-        </div></el-col>
       </el-row>
         </el-carousel-item>
       </el-carousel>
@@ -141,11 +131,14 @@
     align-items: center;
   }
 
-  .my_works {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    height: 500px;
-    background-color: antiquewhite;
+  /deep/ .el-carousel__indicators {
+    width: 80px !important;
+  }
+
+  /deep/ .el-carousel__button {
+    padding: 0 !important;
+    width: 0px !important;
+    height: 20px !important;
   }
 
   .top_button {
