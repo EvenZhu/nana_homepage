@@ -3,45 +3,37 @@
     <div class="row introduce">
       <div class="left col_center">
         <h1>{{ $t("m.who") }}</h1>
-        <p>{{ $t("m.introduce[0]") }}</p>
-        <p>{{ $t("m.introduce[1]") }}</p>
-        <p>{{ $t("m.introduce[2]") }}</p>
+        <p style="font-size: 32px" v-for="index in 3" v-bind:key="index">{{ getWord(index, 'introduce') }}</p>
       </div>
       <img class="art_img" src="../assets/icon_head.png" alt="logo">
     </div>
     <!--    introduce    -->
       <div class="row_center bg_text_view">
-        <h1 class="bg_text">A houston-base designer and illustrator focusing on visual design, web interactions</h1>
+        <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
       </div>
     <!--   Work with me   -->
     <div class="row_center work">
-      <img class="mine_img" src="../assets/icon_wechat.png">
+      <img class="mine_img" src="../assets/head.png">
       <div style="margin-right: 150px">
-        <h1>Work with me</h1>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
-        <p>I enjoy being on the</p>
+        <h1>{{ $t("m.work") }}</h1>
+        <p v-for="index in 4" v-bind:key="index">{{ getWord(index, 'work_with_me') }}</p>
+        <h3>{{$t("m.areas")}}</h3>
+        <p v-for="index in 4" v-bind:key="index">{{ getWord(index, 'area_of_expertise') }}</p>
+        <h3>{{$t("m.familiar")}}</h3>
+        <p v-for="index in 5" v-bind:key="index">{{ getWord(index, 'familiar_place') }}</p>
+        <div class="tag">
+          <router-link to="/about" class="more">{{ $t("m.more") }}</router-link>
+        </div>
       </div>
     </div>
 
     <!--  THE SEMPLICE SHOWCAS  -->
     <div class="line_view">
-      <p>THE SEMPLICE SHOWCAS</p>
+      <p>{{ $t("m.show") }}</p>
       <hr>
     </div>
-    <h1>Proudly serving a ni</h1>
-    <p>-> See inspiring portfo </p>
+    <h1>{{ $t("m.proudly") }}</h1>
+    <router-link to="/show_case">{{ $t("m.see") }}</router-link>
     <div class="my_works">
       <p style="color: burlywood">这里放设计图</p>
     </div>
@@ -68,12 +60,23 @@
       test() {
         console.log("到顶部");
         this.$refs.home.scrollTop = 0
-      }
+      },
+      getWord(index, key) {
+        return this.$t("m." + key + "[" + index + "]");
+      },
     }
 }
 </script>
 
 <style scoped>
+  .more {
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
   .footer{
     margin-right: -170px;
     margin-left: -170px;
@@ -120,7 +123,10 @@
     height: 300px;
     margin-right: 100px;
   }
-
+  .tag {
+    margin-left: 80%;
+    margin-top: 80px;
+  }
   .line_view {
     display: flex;
     align-items: center;
@@ -144,6 +150,10 @@
     white-space: nowrap;
     overflow: hidden;
   }
+  h3{
+    color: white;
+    font-size: 32px;
+  }
 
   hr {
     margin-top: 60px;
@@ -151,8 +161,14 @@
   }
 
   p {
+    margin-top: 40px;
     height: 0;
     color: white;
-    font-size: 37px;
+    font-size: 16px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
   }
 </style>

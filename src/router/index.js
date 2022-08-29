@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
-import ExampleView from '../views/ExampleView.vue'
 import ShowCaseView from "../views/ShowCaseView.vue"
+import OtherView from "../views/OtherView.vue"
+import ExampleView from '../views/ExampleView.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     path: '/show_case',
     name: 'show_case',
     component: ShowCaseView
+  },
+  {
+    path: '/other',
+    name: 'other',
+    component: OtherView
   },
   {
     path: '/example',

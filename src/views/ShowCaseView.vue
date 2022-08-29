@@ -1,6 +1,6 @@
 <template>
     <div class="ShowCaseView">
-      <el-carousel height="1000px" direction="vertical" :autoplay="true" trigger="click">
+      <el-carousel height="1000px" direction="vertical" :autoplay="true" interval="2000" trigger="click">
         <el-carousel-item v-for="item in 10" :key="item" :label="'2022年'+item + '月'">
           <h3>showcase</h3>
           <h3>A selection of current and past projects</h3>

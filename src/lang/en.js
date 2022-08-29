@@ -1,11 +1,43 @@
 export const m = {
+    home: 'Home',
+    about:'About',
+    show_case:'Show case',
+    other:'Other',
+    example:'Example',
     who: 'Who am I?',
     languageCheck:"语言切换",
     introduce: {
-        0: 'A houston-base designer and illustrator',
-        1: 'focusing on visual design, web interactions,',
-        2: 'brand development, and tangible goods.',
+        1: 'A houston-base designer and illustrator',
+        2: 'focusing on visual design, web interactions,',
+        3: 'brand development, and tangible goods.',
     },
+    work:'Work with me',
+    work_with_me:{
+        1:'I enjoy being on the bleeding edge of technology and' ,
+        2:' constantly  learning and acquiring new skills, so if you\'re ' ,
+        3:'looking for someone who  isn\'t afraid of taking on new ' ,
+        4:'challenges, we definitely should talk.',
+    },
+    areas:'Areas I thrive in',
+    area_of_expertise:{
+        1:'User-centered product design, from conception to implementation',
+        2:'Rapid prototyping, testing and developing ideas into fully fledged products',
+        3:'Designing visual identity guidelines and design systems',
+        4:'Helping companies establish a lean scalable, repeatable, measurable design process',
+    },
+    familiar:'Areas I\'m familiar with',
+    familiar_place:{
+        1:'Those are basically things I did before and can do, some better, some worse.',
+        2:'User-centered product design, from conception to implementation',
+        3:'Rapid prototyping, testing and developing ideas into fully fledged products',
+        4:'Designing visual identity guidelines and design systems',
+        5:'Helping companies establish a lean scalable, repeatable, measurable design process',
+
+    },
+    more:'Read more',
+    show:'THE SEMPLICE SHOWCASE',
+    proudly:'Proudly serving a niche community.',
+    see:' -> See inspiring portfo',
     week: {
         sun: '星期日',
         mon: '星期一',
@@ -15,5 +47,9 @@ export const m = {
         fri: '星期五',
         sat: '星期六'
     },
-    menu:'菜单'
+    menu:'菜单',
+    life:'Life is wonderful because of design',
+    discover:'DISCOVER',
+    contact:'CAOTACT',
+    elsewhere:'ELSEWHERE',
 }
