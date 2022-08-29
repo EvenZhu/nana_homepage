@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 import i18n from './i18n'
+import global from './global'
 
 Vue.config.productionTip = false
+Vue.use(global)
 
 new Vue({
   router,

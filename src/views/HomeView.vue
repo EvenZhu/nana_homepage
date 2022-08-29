@@ -1,51 +1,51 @@
 <template>
-  <div class="HomeView col_center">
-    <div class="row introduce">
-      <div class="left col_center">
-        <h1>{{ $t("m.who") }}</h1>
-        <p style="font-size: 32px" v-for="index in 3" v-bind:key="index">{{ getWord(index, 'introduce') }}</p>
+  <div class="col">
+    <div style="margin-left: 10%; width: 80%;">
+      <div class="row introduce">
+        <div class="left col_center">
+          <h1>{{ t("who") }}</h1>
+          <p style="font-size: 32px" v-for="index in 3" v-bind:key="'who' + index">{{ ti('introduce', index) }}</p>
+        </div>
+        <img class="art_img" src="../assets/icon_head.png" alt="logo">
       </div>
-      <img class="art_img" src="../assets/icon_head.png" alt="logo">
-    </div>
-    <!--    introduce    -->
+      <!--    introduce    -->
       <div class="row_center bg_text_view">
         <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
       </div>
-    <!--   Work with me   -->
-    <div class="row_center work">
-      <img class="mine_img" src="../assets/head.png">
-      <div style="margin-right: 150px">
-        <h1>{{ $t("m.work") }}</h1>
-        <p v-for="index in 4" v-bind:key="index">{{ getWord(index, 'work_with_me') }}</p>
-        <h3>{{$t("m.areas")}}</h3>
-        <p v-for="index in 4" v-bind:key="index">{{ getWord(index, 'area_of_expertise') }}</p>
-        <h3>{{$t("m.familiar")}}</h3>
-        <p v-for="index in 5" v-bind:key="index">{{ getWord(index, 'familiar_place') }}</p>
-        <div class="tag">
-          <router-link to="/about" class="more">{{ $t("m.more") }}</router-link>
+      <!--   Work with me   -->
+      <div class="row_center work">
+        <img class="mine_img" src="../assets/head.png">
+        <div style="margin-right: 150px">
+          <h1>{{ t("work") }}</h1>
+          <p v-for="index in 4" v-bind:key="'work' + index">{{ ti('work_with_me', index) }}</p>
+          <h3>{{ t("areas")}}</h3>
+          <p v-for="index in 4" v-bind:key="'areas' + index">{{ ti('area_of_expertise', index) }}</p>
+          <h3>{{ t("familiar")}}</h3>
+          <p v-for="index in 5" v-bind:key="'familiar' + index">{{ ti('familiar_place', index) }}</p>
+          <div class="tag">
+            <router-link to="/about" class="more">{{ t("more") }}</router-link>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--  THE SEMPLICE SHOWCAS  -->
-    <div class="line_view">
-      <p>{{ $t("m.show") }}</p>
-      <hr>
+      <!--  THE SEMPLICE SHOWCAS  -->
+      <div class="line_view">
+        <p>{{ t("show") }}</p>
+        <hr>
+      </div>
+      <h1>{{ t("proudly") }}</h1>
+      <router-link to="/show_case">{{ t("see") }}</router-link>
+      <div class="my_works">
+        <p style="color: burlywood">这里放设计图</p>
+      </div>
+      <div class="top_button">
+        <a href="/#">
+          <el-button icon="el-icon-top" circle>
+          </el-button>
+        </a>
+      </div>
     </div>
-    <h1>{{ $t("m.proudly") }}</h1>
-    <router-link to="/show_case">{{ $t("m.see") }}</router-link>
-    <div class="my_works">
-      <p style="color: burlywood">这里放设计图</p>
-    </div>
-    <div class="top_button">
-      <a href="/#">
-        <el-button icon="el-icon-top" circle>
-        </el-button>
-      </a>
-    </div>
-    <div class="footer">
     <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
-  </div>
   </div>
 </template>
 
@@ -57,13 +57,7 @@
       FooterComponent
     },
     methods: {
-      test() {
-        console.log("到顶部");
-        this.$refs.home.scrollTop = 0
-      },
-      getWord(index, key) {
-        return this.$t("m." + key + "[" + index + "]");
-      },
+      
     }
 }
 </script>
@@ -80,10 +74,6 @@
   .footer{
     margin-right: -170px;
     margin-left: -170px;
-  }
-  .HomeView {
-    margin-left: 10%;
-    width: 80%;
   }
 
   .introduce {

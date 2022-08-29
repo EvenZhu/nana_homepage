@@ -2,11 +2,11 @@
   <div class="HeaderComponent">
     <img class="logo" src="../assets/logo.png" alt="logo">
     <nav>
-      <router-link to="/">{{ $t("m.home") }}</router-link>
-      <router-link to="/about">{{ $t("m.about") }}</router-link>
-      <router-link to="/show_case">{{ $t("m.show_case") }}</router-link>
-      <router-link to="/other">{{ $t("m.other") }}</router-link>
-      <router-link to="/example">{{ $t("m.example") }}</router-link>
+      <router-link to="/">{{ t("home") }}</router-link>
+      <router-link to="/about">{{ t("about") }}</router-link>
+      <router-link to="/show_case">{{ t("show_case") }}</router-link>
+      <router-link to="/other">{{ t("other") }}</router-link>
+      <router-link to="/example">{{ t("example") }}</router-link>
 
       <el-select v-model="value" placeholder="Language">
         <el-option
