@@ -23,7 +23,6 @@
               </div>
               <div>
                 <el-tag type="info" color="white" size="mini">NETLIFY FORWS</el-tag>
-
               </div>
             </div>
           </div>

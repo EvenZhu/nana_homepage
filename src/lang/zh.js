@@ -51,6 +51,6 @@ export const m = {
     menu:'菜单',
     life:'生活因为设计而精彩',
     discover:'发现',
-    contact:'联系',
+    contact:'联系方式',
     elsewhere:'其他联系方式',
 }

@@ -1,5 +1,8 @@
 <template>
   <div class="col">
+    <div class="row_center bg_text_view">
+      <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
+    </div>
     <div style="margin-left: 10%; width: 80%;">
       <div class="row introduce">
         <div class="left col_center">
@@ -9,9 +12,6 @@
         <img class="art_img" src="../assets/icon_head.png" alt="logo">
       </div>
       <!--    introduce    -->
-      <div class="row_center bg_text_view">
-        <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
-      </div>
       <!--   Work with me   -->
       <div class="row work">
         <img class="mine_img" src="../assets/head.png">
@@ -35,18 +35,11 @@
       </div>
       <h1>{{ t("proudly") }}</h1>
       <router-link to="/show_case">{{ t("see") }}</router-link>
-
-      <el-carousel height="200px"  type="card"  direction="horizontal" :autoplay="true" interval="2000" loop="true">
-        <el-carousel-item  v-for="item in 3" :key="item" >
-          <el-row :gutter="10">
-            <el-col :span="6"><div class="grid-content bg-purple">
-              <img  height="180" class="art_img_img" src="../assets/auto.png">
-            </div>
-            </el-col>
-
-      </el-row>
-        </el-carousel-item>
-      </el-carousel>
+      <div class="row_center scroll" v-for="index in 3" :class="'scroll' + index" v-bind:key="'img' + index" >
+        <img class="img" src="../assets/auto.png">
+        <img class="img" src="../assets/auto.png">
+        <img class="img" src="../assets/auto.png">
+      </div>
       <div class="top_button">
         <a href="/#">
           <el-button icon="el-icon-top" circle>
@@ -91,13 +84,27 @@
   }
 
   .bg_text_view {
-    margin-top: -130px;
+    margin-top: -70px;
+    margin-bottom: -40px;
+    position: absolute;
+    top: 620px;
+    width: 100%;
     z-index: 0;
   }
 
   .bg_text {
     color: #4B4B4B;
     font-size: 69px;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 
   .left {
@@ -130,6 +137,24 @@
     display: flex;
     align-items: center;
   }
+  .img{
+    height: 250px;
+    margin-right: 40px;
+  }
+
+  .scroll {
+    margin-top: 50px;
+    animation: marquee 15s linear infinite alternate;
+  }
+
+  .scroll2 {
+    animation-delay: 1.5s;
+  }
+
+  .scroll3 {
+    animation-delay: 3s;
+    margin-bottom: 50px;
+  }
 
   /deep/ .el-carousel__indicators {
     width: 80px !important;
@@ -138,13 +163,13 @@
   /deep/ .el-carousel__button {
     padding: 0 !important;
     width: 0px !important;
-    height: 20px !important;
+    height: 0px !important;
   }
 
   .top_button {
     display: flex;
     justify-content: end;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   h1 {
     color: white;

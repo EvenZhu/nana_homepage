@@ -6,8 +6,8 @@
       <div class="left">
         <h2>{{ t("discover") }}</h2>
         <ul>
-          <li v-for="index in views.length" v-bind:key="'view' + index">
-            <router-link :to="'/' + views[index - 1]">{{ t(views[index - 1]) }}</router-link>
+          <li v-for="view in views" v-bind:key="view">
+            <router-link :to="'/' + view">{{ t(view) }}</router-link>
           </li>
         </ul>
       </div>
@@ -15,7 +15,7 @@
         <h2>{{ t("contact") }}</h2>
         <ul>
           <li>17611792362</li>
-          <li>changnaxin1991@gmail.com</li>
+          <a href="mailto:sample@fly63.com?subject=test&cc=sample@hotmail.com&subject=主题&body=内容">changnaxin1991@gmail.com</a>
         </ul>
       </div>
       <div class="col_center">
