@@ -7,7 +7,7 @@
       <div class="row introduce">
         <div class="left col_center">
           <h1>{{ t("who") }}</h1>
-          <p style="font-size: 32px" v-for="index in 3" v-bind:key="'who' + index">{{ ti('introduce', index) }}</p>
+          <p style="font-size: 30px" v-for="index in 3" v-bind:key="'who' + index">{{ ti('introduce', index) }}</p>
         </div>
         <img class="art_img" src="../assets/icon_head.png" alt="logo">
       </div>
@@ -172,12 +172,15 @@
     margin-bottom: 50px;
   }
   h1 {
+    margin-bottom:10px;
     color: white;
     font-size: 74px;
     white-space: nowrap;
     overflow: hidden;
   }
   h3{
+    margin-top: 40px;
+    margin-bottom:-10px;
     color: white;
     font-size: 32px;
   }
@@ -188,7 +191,7 @@
   }
 
   p {
-    margin-top: 40px;
+    margin-top: 30px;
     height: 0;
     color: white;
     font-size: 16px;

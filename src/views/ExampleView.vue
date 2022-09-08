@@ -70,14 +70,43 @@
         </el-rate>
         <el-color-picker v-model="color"></el-color-picker>
         <el-skeleton :rows="6" animated/>
-      <el-carousel height="200px" direction="vertical" :autoplay="false">
-        <el-carousel-item v-for="item in 3" :key="item">
-          <h3 class="medium">{{ item }}</h3>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-</template>
 
+    <div class="block">
+    <el-timeline>
+        <el-timeline-item timestamp="2018/4/12" placement="top" >
+        <el-card>
+            <h3>Work experience</h3>
+            <p>Footi is an in-house Little Thunder passion project. Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/</p>
+        </el-card>
+        </el-timeline-item> 
+        <el-timeline-item timestamp="2018/4/3" placement="top">
+        <el-card>
+            <h3>Work experience</h3>
+            <p>Footi is an in-house Little Thunder passion project. Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/</p>
+        </el-card>
+        </el-timeline-item>
+        <el-timeline-item timestamp="2018/4/2" placement="top">
+        <el-card>
+            <h3>Work experience</h3>
+            <p>Footi is an in-house Little Thunder passion project. Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/</p>
+        </el-card>
+        </el-timeline-item>
+        <el-timeline-item timestamp="2018/4/2" placement="top">
+        <el-card>
+            <h3>Work experience</h3>
+            <p>Footi is an in-house Little Thunder passion project. Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/</p>
+        </el-card>
+        </el-timeline-item>
+        <el-timeline-item timestamp="2018/4/2" placement="top">
+        <el-card>
+            <h3>Work experience</h3>
+            <p>Footi is an in-house Little Thunder passion project. Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/</p>
+        </el-card>
+        </el-timeline-item>
+    </el-timeline>
+    </div>
+</div>
+</template>
 <script>
     export default {
         name: 'ExampleView',
@@ -87,11 +116,16 @@
                 value1: null,
                 value2: new Date(2016, 9, 10, 18, 40),
                 value3: new Date(2016, 9, 10, 18, 40),
-                colors:['#99A9BF', '#F7BA2A', '#FF9900'],
-                color:'#409EFF'
+                 activities: [{
+                 color: '#0bbd87',
+                 size: 'large'
+                 }]
+
+
             }
         }
     };
+  
 </script>
 <style scoped>
 
@@ -138,5 +172,33 @@
 
     .el-carousel__item:nth-child(2n+1) {
       background-color: #d3dce6;
+    }
+    .el-timeline{
+        margin-left: 500px;
+        margin-right: 500px;
+    }
+    /deep/.el-timeline-item__node--normal{
+        left: -40px;
+        width: 100px;
+        height: 100px;
+        background-image: url(../assets/logo.png);
+        background-size: 100px 100px;
+
+    }
+    /deep/.el-timeline-item__wrapper {
+        margin-left: 60px;
+        justify-content: center;
+    }
+    .el-card{
+        height: 200px;
+        width: 316px;
+        border: 1px ;
+        background-color:transparent;
+        overflow: hidden;
+        color:white;
+        transition: .3s;
+    }
+    p{
+        color:grey;
     }
 </style>

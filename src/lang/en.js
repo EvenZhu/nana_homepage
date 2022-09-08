@@ -7,9 +7,9 @@ export const m = {
     who: 'Who am I?',
     languageCheck:"语言切换",
     introduce: {
-        1: 'A houston-base designer and illustrator',
-        2: 'focusing on visual design, web interactions,',
-        3: 'brand development, and tangible goods.',
+        1: 'A houston-base designer and illustrator focusing on',
+        2: ' visual design, web interactions,brand development,',
+        3: ' and tangible goods.',
     },
     work:'Work with me',
     work_with_me:{
