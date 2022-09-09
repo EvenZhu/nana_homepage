@@ -52,4 +52,11 @@ export const m = {
     discover:'DISCOVER',
     contact:'CAOTACT',
     elsewhere:'ELSEWHERE',
+    personal:'Personal introduction',
+    name1:'Name:Chang na xin',
+    gender:'Gender:Girl',
+    name2:'Name:Web design、UI design、App design',
+    hobby:'Hobby:Listen to the song、Reading、Motion',
+    experience:'Work experience',
+    foot:'Footi is an in-house Little Thunder passion project.   Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/',
 }

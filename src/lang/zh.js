@@ -53,4 +53,12 @@ export const m = {
     discover:'发现',
     contact:'联系方式',
     elsewhere:'其他联系方式',
+    personal:'个人简介',
+    name1:'常娜新',
+    gender:'女',
+    name2:'网页设计、UI设计、APP设计',
+    hobby:'业余爱好：听歌、阅读、运动',
+    experience:'工作经历',
+    foot:'Footi是一个小迅雷内部的激情项目。使用Jamstack方法构建，所有内容都在构建时预呈现，并作为静态HTML/',
+
 }
