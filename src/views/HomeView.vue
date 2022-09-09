@@ -7,7 +7,7 @@
       <div class="row introduce">
         <div class="left col_center">
           <h1>{{ t("who") }}</h1>
-          <p style="font-size: 30px" v-for="index in 3" v-bind:key="'who' + index">{{ ti('introduce', index) }}</p>
+          <p style="font-size: 28px" v-for="index in 3" v-bind:key="'who' + index">{{ ti('introduce', index) }}</p>
         </div>
         <img class="art_img" src="../assets/icon_head.png" alt="logo">
       </div>
@@ -19,9 +19,10 @@
           <h1>{{ t("work") }}</h1>
           <p v-for="index in 4" v-bind:key="'work' + index">{{ ti('work_with_me', index) }}</p>
           <h3>{{ t("areas")}}</h3>
-          <p v-for="index in 4" v-bind:key="'areas' + index">{{ ti('area_of_expertise', index) }}</p>
+          <li v-for="index in 4" v-bind:key="'areas' + index">{{ ti('area_of_expertise', index) }}</li>
           <h3>{{ t("familiar")}}</h3>
-          <p v-for="index in 5" v-bind:key="'familiar' + index">{{ ti('familiar_place', index) }}</p>
+          <p style="margin-top:20px;margin-bottom:60px">{{ t("those")}}</p>
+          <li v-for="index in 4" v-bind:key="'familiar' + index">{{ ti('familiar_place', index) }}</li>
           <div class="tag">
             <router-link to="/about" class="more">{{ t("more") }}</router-link>
           </div>
@@ -179,18 +180,26 @@
     overflow: hidden;
   }
   h3{
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom:-10px;
     color: white;
     font-size: 32px;
   }
 
   hr {
-    margin-top: 60px;
+    border: 0.5px solid gray;
+    margin-top: 52px;
     width: 70%;
   }
 
   p {
+    margin-top: 40px;
+    height: 0;
+    color: white;
+    font-size: 16px;
+  }
+  li {
+    margin-bottom: 50px;
     margin-top: 30px;
     height: 0;
     color: white;

@@ -16,7 +16,7 @@
           <img src="../assets/person.png" style="margin-left:-350px;;margin-top:-20px" > 
         </div>
       </div>
-       
+      
     <div class="row">
 
     </div>
