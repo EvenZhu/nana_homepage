@@ -82,14 +82,17 @@
     width: 400px;
     height: 150px;
   }
+
   .left{
     margin-left: 800px;
     color: white;
   }
+
   .introduce{
     margin-top:70px;
 
   }
+
   .bg_text_view{
           margin-left: 425px;
       }
@@ -100,19 +103,24 @@
           background-image: url(../assets/logo.png);
           opacity: 0.1;
   }
+
   .block{
           margin-top: 200px;
       }
+
   .el-timeline{
           margin-left: 700px;
           margin-right: 700px;
       }
+
   /deep/.el-timeline-item__node--normal{
-          left: -40px;
+          left: -50px;
           width: 100px;
           height: 100px;
           background-image: url(../assets/logo.png);
           background-size: 100px 100px;
+          box-shadow: 0 0 10px rgb(253, 251, 251);
+          border:3px solid white
 
       }
   /deep/.el-timeline-item__wrapper {
@@ -128,18 +136,21 @@
           color:white;
           transition: .3s;
           }
+
       img{
         border: 1px solid orange;
-        
       }
+
        p{
           color:grey;
          }
+
       h2{
           margin-bottom: 20px;
           text-align-last: center;
           color: white;
         }
+
       .top_button {
           display: flex;
           justify-content: end;
