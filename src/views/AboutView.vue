@@ -20,15 +20,18 @@
           style="margin-left: -350px; margin-top: -20px"
         />
       </div>
-      
-
     </div>
-
+<!-- 这是啥啥啥 -->
     <div class="row"></div>
     <div class="block">
       <h2>{{ t("experience") }}</h2>
-      <el-timeline style="width: 100%; padding-left: 400px" >
-        <el-timeline-item v-for="info in infos" v-bind:key="info.date" :timestamp="info.date" placement="top">
+      <el-timeline style="width: 100%; padding-left: 00px">
+        <el-timeline-item
+          v-for="info in infos"
+          v-bind:key="info.date"
+          :timestamp="info.date"
+          placement="top"
+        >
           <el-card class="left_card">
             <h3>{{ t(info.title) }}</h3>
             <p>{{ t(info.desc) }}</p>
@@ -57,14 +60,9 @@ export default {
   data() {
     return {
       infos: [
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-      ]
+        { date: "2014-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+      ],
     };
   },
   components: {
@@ -72,11 +70,12 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .border {
   border: 1px solid rgb(252, 248, 248);
   border-width: 2px;
-  border-right: none;
+  border-right: dotted;
   margin-left: 800px;
   width: 400px;
   height: 150px;
@@ -89,7 +88,7 @@ export default {
 
 .left_card {
   position: absolute;
-  left: -450px;
+  left: -400px;
 }
 
 .introduce {
@@ -125,10 +124,12 @@ export default {
   box-shadow: 0 0 10px rgb(253, 251, 251);
   border: 3px solid white;
 }
+
 /deep/.el-timeline-item__wrapper {
   margin-left: 60px;
   justify-content: center;
 }
+
 .el-card {
   height: 200px;
   width: 316px;
