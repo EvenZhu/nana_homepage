@@ -94,7 +94,7 @@ export default {
 .personal_info {
   color: white;
   font-size: 20px;
-  margin-top: 68.5px;
+  margin-top: 60px;
 }
 
 .left_card {
