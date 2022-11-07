@@ -1,41 +1,39 @@
 <template>
   <div class="AboutView">
-    <div class="border">
-      <p style="margin-left: 20px; color: white">{{ t("life") }}</p>
-      <p style="margin-left: 90px; color: white">{{ t("life") }}</p>
-    </div>
-    <div class="left">
-      <div class="introduce">
-        <p style="color: white; font-size: 20px">{{ t("name1") }}</p>
-        <p style="color: white; font-size: 20px">{{ t("gender") }}</p>
-        <p style="color: white; font-size: 20px">{{ t("name2") }}</p>
-        <p style="color: white; font-size: 20px">{{ t("hobby") }}</p>
+    <div class="Personal">
+      <div class="left_personal">
+        <h1>Personal introduction</h1>
+        <img src="../assets/person.png" />
       </div>
-      <div class="border2">
-        <h2 style="margin-left: -1350px; margin-top: -250px">
-          {{ t("personal") }}
-        </h2>
-        <img
-          src="../assets/person.png"
-          style="margin-left: -350px; margin-top: -20px"
-        />
+      <div class="right_personal">
+        <div class="text_border">
+          <p v-for="index in 2" v-bind:key="life + index">{{ t("life") }}</p>
+        </div>
+        <div class="personal_info">
+          <p>{{ t("name1") }}</p>
+          <p>{{ t("gender") }}</p>
+          <p>{{ t("name2") }}</p>
+          <p>{{ t("hobby") }}</p>
+        </div>
       </div>
-      
-
     </div>
-
     <div class="row"></div>
     <div class="block">
       <h2>{{ t("experience") }}</h2>
-      <el-timeline style="width: 100%; padding-left: 400px" >
-        <el-timeline-item v-for="info in infos" v-bind:key="info.date" :timestamp="info.date" placement="top">
+      <el-timeline style="width: 10%; padding-left: 150px">
+        <el-timeline-item
+          v-for="info in infos"
+          v-bind:key="info.date"
+          :timestamp="info.date"
+          placement="top"
+        >
           <el-card class="left_card">
             <h3>{{ t(info.title) }}</h3>
-            <p>{{ t(info.desc) }}</p>
+            <p style="color: gray">{{ t(info.desc) }}</p>
           </el-card>
           <el-card>
             <h3>{{ t("experience") }}</h3>
-            <p>{{ t("foot") }}</p>
+            <p style="color: gray">{{ t("foot") }}</p>
           </el-card>
         </el-timeline-item>
       </el-timeline>
@@ -57,14 +55,14 @@ export default {
   data() {
     return {
       infos: [
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-        {"date": "2015-12-12", "title": "experience", "desc": "foot"},
-      ]
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-12-12", title: "experience", desc: "foot" },
+      ],
     };
   },
   components: {
@@ -73,18 +71,30 @@ export default {
 };
 </script>
 <style scoped>
-.border {
-  border: 1px solid rgb(252, 248, 248);
-  border-width: 2px;
-  border-right: none;
-  margin-left: 800px;
-  width: 400px;
-  height: 150px;
+.Personal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 60px;
+  background-color: #151719;
+}
+.left_personal {
+  margin-left: 20%;
 }
 
-.left {
-  margin-left: 800px;
+.right_personal {
+  padding-right: 20%;
+  margin-top: -20px;
+}
+.text_border {
+  border: 1.5px solid white;
+  border-right: none;
+  padding: 28.5px 0px 39px 35px;
+}
+.personal_info {
   color: white;
+  font-size: 20px;
+  margin-top: 68.5px;
 }
 
 .left_card {
@@ -92,19 +102,11 @@ export default {
   left: -450px;
 }
 
-.introduce {
-  margin-top: 70px;
-}
-
-.bg_text_view {
-  margin-left: 425px;
-}
-
 .row {
-  margin-top: -500px;
+  margin-top: -550px;
   height: 350px;
   background-image: url(../assets/logo.png);
-  opacity: 0.1;
+  opacity: 0.09;
 }
 
 .block {
@@ -140,13 +142,20 @@ export default {
 }
 
 img {
-  border: 1px solid orange;
+  border: 1.5px solid orange;
+  border-top: none;
+  border-right: none;
+  margin-left: 90px;
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 
 p {
-  color: grey;
+  color: white;
 }
-
+h1 {
+  color: white;
+}
 h2 {
   margin-bottom: 20px;
   text-align-last: center;

@@ -18,9 +18,9 @@
         <div style="margin-right: 150px">
           <h1>{{ t("work") }}</h1>
           <p v-for="index in 4" v-bind:key="'work' + index">{{ ti('work_with_me', index) }}</p>
-          <h3>{{ t("areas")}}</h3>
+          <h2>{{ t("areas")}}</h2>
           <li v-for="index in 4" v-bind:key="'areas' + index">{{ ti('area_of_expertise', index) }}</li>
-          <h3>{{ t("familiar")}}</h3>
+          <h2>{{ t("familiar")}}</h2>
           <p style="margin-top:20px;margin-bottom:60px">{{ t("those")}}</p>
           <li v-for="index in 4" v-bind:key="'familiar' + index">{{ ti('familiar_place', index) }}</li>
           <div class="tag">
@@ -175,15 +175,15 @@
   h1 {
     margin-bottom:10px;
     color: white;
-    font-size: 74px;
+    font-size: 37px;
     white-space: nowrap;
     overflow: hidden;
   }
-  h3{
+  h2{
     margin-top: 60px;
     margin-bottom:-10px;
-    color: white;
-    font-size: 32px;
+    color: #ffffff;
+    font-size: 16px;
   }
 
   hr {
@@ -196,14 +196,14 @@
     margin-top: 40px;
     height: 0;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
   }
   li {
     margin-bottom: 50px;
     margin-top: 30px;
     height: 0;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   a {
