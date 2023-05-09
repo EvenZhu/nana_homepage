@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <HeaderComponent msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent msg="Welcome to Your Vue.js App" />
     <router-view></router-view>
+    <el-backtop :visibility-height="1000" :bottom="100" />
   </div>
 </template>
 
@@ -21,5 +22,5 @@ export default {
 </script>
 
 <style>
-  @import "../static/css/global.css";
+@import "../static/css/global.css";
 </style>

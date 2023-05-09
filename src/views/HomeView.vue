@@ -18,10 +18,10 @@
         <div style="margin-right: 150px">
           <h1>{{ t("work") }}</h1>
           <p v-for="index in 4" v-bind:key="'work' + index">{{ ti('work_with_me', index) }}</p>
-          <h2>{{ t("areas")}}</h2>
+          <h2>{{ t("areas") }}</h2>
           <li v-for="index in 4" v-bind:key="'areas' + index">{{ ti('area_of_expertise', index) }}</li>
-          <h2>{{ t("familiar")}}</h2>
-          <p style="margin-top:20px;margin-bottom:60px">{{ t("those")}}</p>
+          <h2>{{ t("familiar") }}</h2>
+          <p style="margin-top:20px;margin-bottom:60px">{{ t("those") }}</p>
           <li v-for="index in 4" v-bind:key="'familiar' + index">{{ ti('familiar_place', index) }}</li>
           <div class="tag">
             <router-link to="/about" class="more">{{ t("more") }}</router-link>
@@ -36,16 +36,10 @@
       </div>
       <h1>{{ t("proudly") }}</h1>
       <router-link to="/show_case">{{ t("see") }}</router-link>
-      <div class="row_center scroll" v-for="index in 3" :class="'scroll' + index" v-bind:key="'img' + index" >
+      <div class="row_center scroll" v-for="index in 3" :class="'scroll' + index" v-bind:key="'img' + index">
         <img class="img" src="../assets/auto.png">
         <img class="img" src="../assets/auto.png">
         <img class="img" src="../assets/auto.png">
-      </div>
-      <div class="top_button">
-        <a href="/#">
-          <el-button icon="el-icon-top" circle>
-          </el-button>
-        </a>
       </div>
     </div>
     <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
@@ -53,161 +47,168 @@
 </template>
 
 <script>
-  import FooterComponent from '../components/FooterComponent.vue'
-  export default {
-    name: "HomeView",
-    components:{
-      FooterComponent
-    },
-    methods: {
-      
-    }
+import FooterComponent from '../components/FooterComponent.vue'
+export default {
+  name: "HomeView",
+  components: {
+    FooterComponent
+  },
+  methods: {
+
+  }
 }
 </script>
 
 <style scoped>
-  .more {
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
-    padding: 5px;
-    border-radius: 5px;
+.more {
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-right: -170px;
+  margin-left: -170px;
+}
+
+.introduce {
+  justify-content: center;
+  align-items: start;
+}
+
+.bg_text_view {
+  margin-top: -70px;
+  margin-bottom: -40px;
+  position: absolute;
+  top: 620px;
+  width: 100%;
+  z-index: 0;
+}
+
+.bg_text {
+  color: #4B4B4B;
+  font-size: 69px;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
   }
 
-  .footer{
-    margin-right: -170px;
-    margin-left: -170px;
+  to {
+    transform: translateX(-100%);
   }
+}
 
-  .introduce {
-    justify-content: center;
-    align-items: start;
-  }
+.left {
+  z-index: 100;
+  padding-left: 10%;
+  align-items: start;
+}
 
-  .bg_text_view {
-    margin-top: -70px;
-    margin-bottom: -40px;
-    position: absolute;
-    top: 620px;
-    width: 100%;
-    z-index: 0;
-  }
+.art_img {
+  z-index: 99;
+  margin-left: -50px;
+  height: 556px;
+}
 
-  .bg_text {
-    color: #4B4B4B;
-    font-size: 69px;
-    animation: marquee 20s linear infinite;
-  }
+.work {
+  margin-top: 100px;
+  justify-content: center;
+}
 
-  @keyframes marquee {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
+.mine_img {
+  width: 300px;
+  height: 300px;
+  margin-right: 100px;
+}
 
-  .left {
-    z-index: 100;
-    padding-left: 10%;
-    align-items: start;
-  }
+.tag {
+  margin-left: 80%;
+  margin-top: 80px;
+}
 
-  .art_img {
-    z-index: 99;
-    margin-left: -50px;
-    height: 556px;
-  }
+.line_view {
+  display: flex;
+  align-items: center;
+}
 
-  .work {
-    margin-top: 100px;
-    justify-content: center;
-  }
+.img {
+  height: 250px;
+  margin-right: 40px;
+}
 
-  .mine_img {
-    width: 300px;
-    height: 300px;
-    margin-right: 100px;
-  }
-  .tag {
-    margin-left: 80%;
-    margin-top: 80px;
-  }
-  .line_view {
-    display: flex;
-    align-items: center;
-  }
-  .img{
-    height: 250px;
-    margin-right: 40px;
-  }
+.scroll {
+  margin-top: 50px;
+  animation: marquee 15s linear infinite alternate;
+}
 
-  .scroll {
-    margin-top: 50px;
-    animation: marquee 15s linear infinite alternate;
-  }
+.scroll2 {
+  animation-delay: 1.5s;
+}
 
-  .scroll2 {
-    animation-delay: 1.5s;
-  }
+.scroll3 {
+  animation-delay: 3s;
+  margin-bottom: 50px;
+}
 
-  .scroll3 {
-    animation-delay: 3s;
-    margin-bottom: 50px;
-  }
+/deep/ .el-carousel__indicators {
+  width: 80px !important;
+}
 
-  /deep/ .el-carousel__indicators {
-    width: 80px !important;
-  }
+/deep/ .el-carousel__button {
+  padding: 0 !important;
+  width: 0px !important;
+  height: 0px !important;
+}
 
-  /deep/ .el-carousel__button {
-    padding: 0 !important;
-    width: 0px !important;
-    height: 0px !important;
-  }
+.top_button {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
+}
 
-  .top_button {
-    display: flex;
-    justify-content: end;
-    margin-bottom: 50px;
-  }
-  h1 {
-    margin-bottom:10px;
-    color: white;
-    font-size: 37px;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  h2{
-    margin-top: 60px;
-    margin-bottom:-10px;
-    color: #ffffff;
-    font-size: 16px;
-  }
+h1 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 37px;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-  hr {
-    border: 0.5px solid gray;
-    margin-top: 52px;
-    width: 70%;
-  }
+h2 {
+  margin-top: 60px;
+  margin-bottom: -10px;
+  color: #ffffff;
+  font-size: 16px;
+}
 
-  p {
-    margin-top: 40px;
-    height: 0;
-    color: white;
-    font-size: 14px;
-  }
-  li {
-    margin-bottom: 50px;
-    margin-top: 30px;
-    height: 0;
-    color: white;
-    font-size: 12px;
-  }
+hr {
+  border: 0.5px solid gray;
+  margin-top: 52px;
+  width: 70%;
+}
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
+p {
+  margin-top: 40px;
+  height: 0;
+  color: white;
+  font-size: 14px;
+}
+
+li {
+  margin-bottom: 50px;
+  margin-top: 30px;
+  height: 0;
+  color: white;
+  font-size: 12px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
 </style>
