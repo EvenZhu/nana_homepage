@@ -8,12 +8,9 @@
       <router-link to="/other">{{ t("other") }}</router-link>
       <router-link to="/example">{{ t("example") }}</router-link>
 
-      <el-select popper-class="selectFrom" v-model="value" :placeholder="placeholder()" size="small" :popper-append-to-body="false">
-        <el-option
-            v-for="item in options"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
+      <el-select popper-class="selectFrom" v-model="value" :placeholder="placeholder()" size="small"
+        :popper-append-to-body="false">
+        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
         </el-option>
       </el-select>
     </nav>
@@ -41,15 +38,15 @@ export default {
     }
   },
   watch: {
-    value: function(newValue, oldValue) {
+    value: function (newValue, oldValue) {
       console.log(newValue + "-" + oldValue);
-      if (newValue === 'English'){
-        this.lang='en';
-        localStorage.setItem("locale",this.lang)
+      if (newValue === 'English') {
+        this.lang = 'en';
+        localStorage.setItem("locale", this.lang)
         this.$i18n.locale = this.lang;
-      }else {
-        this.lang="zh";
-        localStorage.setItem("locale",this.lang)
+      } else {
+        this.lang = "zh";
+        localStorage.setItem("locale", this.lang)
         this.$i18n.locale = this.lang;
       }
     }
@@ -70,7 +67,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
+  padding: 50px 50px 0;
   background-color: #151719;
 }
 
@@ -108,6 +105,7 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 router-link {
   margin: 10px;
   font-size: 18px;
@@ -118,5 +116,4 @@ a {
   margin: 0 15px;
   text-decoration: none;
 }
-
 </style>

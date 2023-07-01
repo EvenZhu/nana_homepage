@@ -1,5 +1,6 @@
 <template>
   <div class="AboutView">
+    <HeaderComponent />
     <div class="Personal">
       <div class="left_personal">
         <h1>Personal introduction</h1>
@@ -21,12 +22,7 @@
     <div class="block">
       <h2>{{ t("experience") }}</h2>
       <el-timeline style="width: 10%; padding-left: 150px">
-        <el-timeline-item
-          v-for="info in infos"
-          v-bind:key="info.date"
-          :timestamp="info.date"
-          placement="top"
-        >
+        <el-timeline-item v-for="info in infos" v-bind:key="info.date" :timestamp="info.date" placement="top">
           <el-card class="left_card">
             <h3>{{ t(info.title) }}</h3>
             <p style="color: gray">{{ t(info.desc) }}</p>
@@ -42,14 +38,13 @@
           <el-button icon="el-icon-top" circle> </el-button>
         </a>
       </div>
-      <FooterComponent
-        style="width: 100%; position: static; bottom: 0"
-      ></FooterComponent>
+      <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
     </div>
   </div>
 </template>
 <script>
-import FooterComponent from "../components/FooterComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue"
 export default {
   name: "AboutView",
   data() {
@@ -66,6 +61,7 @@ export default {
     };
   },
   components: {
+    HeaderComponent,
     FooterComponent,
   },
 };
@@ -78,6 +74,7 @@ export default {
   padding: 60px;
   background-color: #151719;
 }
+
 .left_personal {
   margin-left: 20%;
 }
@@ -86,11 +83,13 @@ export default {
   padding-right: 20%;
   margin-top: -20px;
 }
+
 .text_border {
   border: 1.5px solid white;
   border-right: none;
   padding: 28.5px 0px 39px 35px;
 }
+
 .personal_info {
   color: white;
   font-size: 20px;
@@ -127,10 +126,12 @@ export default {
   box-shadow: 0 0 10px rgb(253, 251, 251);
   border: 3px solid white;
 }
+
 /deep/.el-timeline-item__wrapper {
   margin-left: 60px;
   justify-content: center;
 }
+
 .el-card {
   height: 200px;
   width: 316px;
@@ -153,9 +154,11 @@ img {
 p {
   color: white;
 }
+
 h1 {
   color: white;
 }
+
 h2 {
   margin-bottom: 20px;
   text-align-last: center;

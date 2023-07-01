@@ -14,4 +14,4 @@ new Vue({
   store,
   i18n,
   render: h => h(App)
-}).$mount('#body')
+}).$mount('#app')

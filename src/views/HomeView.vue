@@ -1,5 +1,6 @@
 <template>
   <div class="col">
+    <HeaderComponent />
     <div class="row_center bg_text_view">
       <h1 class="bg_text">If you can design one thing, you can design every thing.</h1>
     </div>
@@ -47,11 +48,13 @@
 </template>
 
 <script>
-import FooterComponent from '../components/FooterComponent.vue'
+import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 export default {
   name: "HomeView",
   components: {
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   },
   methods: {
 

@@ -1,13 +1,9 @@
 <template>
   <div class="ExampleView">
+    <HeaderComponent />
     <h1 style="background-color: white">示例页面</h1>
     <el-select v-model="value" placeholder="请选择">
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      >
+      <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
       </el-option>
     </el-select>
     <div>
@@ -35,30 +31,17 @@
       </el-col>
     </el-row>
     <div>
-      <el-link
-        href="https://cn.vuejs.org/guide/introduction.html"
-        target="_blank"
-        >Vue.js</el-link
-      >
+      <el-link href="https://cn.vuejs.org/guide/introduction.html" target="_blank">Vue.js</el-link>
     </div>
     <el-switch v-model="value" active-color="#13ce66" inactive-color="#ff4949">
     </el-switch>
-    <el-time-picker
-      v-model="value1"
-      :picker-options="{
-        selectableRange: '18:30:00 - 20:30:00',
-      }"
-      placeholder="任意时间点"
-    >
+    <el-time-picker v-model="value1" :picker-options="{
+      selectableRange: '18:30:00 - 20:30:00',
+    }" placeholder="任意时间点">
     </el-time-picker>
-    <el-time-picker
-      arrow-control
-      v-model="value2"
-      :picker-options="{
-        selectableRange: '18:30:00 - 20:30:00',
-      }"
-      placeholder="任意时间点"
-    >
+    <el-time-picker arrow-control v-model="value2" :picker-options="{
+      selectableRange: '18:30:00 - 20:30:00',
+    }" placeholder="任意时间点">
     </el-time-picker>
     <div class="block">
       <span class="demonstration">区分颜色</span>
@@ -125,8 +108,12 @@
   </div>
 </template>
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue'
 export default {
   name: "ExampleView",
+  components: {
+    HeaderComponent
+  },
   data() {
     return {
       value: null,
@@ -146,33 +133,42 @@ export default {
 <style scoped>
 .el-row {
   margin-bottom: 20px;
+
   &:last-child {
     margin-bottom: 0;
   }
 }
+
 .el-col {
   border-radius: 4px;
 }
+
 .bg-purple-dark {
   background: #99a9bf;
 }
+
 .bg-purple {
   background: #d3dce6;
 }
+
 .bg-purple-light {
   background: #e5e9f2;
 }
+
 .grid-content {
   border-radius: 4px;
   min-height: 50px;
 }
+
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
 }
+
 i {
   color: white;
 }
+
 .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;
@@ -188,10 +184,12 @@ i {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
+
 .el-timeline {
   margin-left: 500px;
   margin-right: 500px;
 }
+
 /deep/.el-timeline-item__node--normal {
   left: -40px;
   width: 100px;
@@ -199,10 +197,12 @@ i {
   background-image: url(../assets/logo.png);
   background-size: 100px 100px;
 }
+
 /deep/.el-timeline-item__wrapper {
   margin-left: 60px;
   justify-content: center;
 }
+
 .el-card {
   height: 200px;
   width: 316px;
@@ -212,6 +212,7 @@ i {
   color: white;
   transition: 0.3s;
 }
+
 p {
   color: grey;
 }

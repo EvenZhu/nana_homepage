@@ -1,9 +1,13 @@
-#body {
+body {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: hidden;
+    background-color: #151719;
+}
+
+#app {
     text-align: center;
-    margin-top: 60px;
 }
 
 .row {
