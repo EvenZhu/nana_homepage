@@ -59,4 +59,8 @@ export const m = {
     hobby:'Hobby:Listen to the song、Reading、Motion',
     experience:'Work experience',
     foot:'Footi is an in-house Little Thunder passion project.   Built with a Jamstack methodology, all content is pre-rendered at build time and served as static HTML/',
+    project:'A selection of current and past projects',
+    website:'"As soon as we knew we had the budget to do a new company website, we reached out to DJNR Interactive. We have been working with them for several years and knew the quality of work they do. Our latest project before Dieste.com was a mock up travel agency site for a bookstore that won several awards and got worldwide recognition. The goal for our site was to have our work be the main selling point of our company and we worked closely with DJNR´s team to achieve the best solution. They brought a lot of input onto',
+    Director:'Roberto Hernández, Director Social & Digital Strategy',
+    view:'VIEW PROJECT >',
 }
