@@ -12,8 +12,6 @@
         </div>
         <img class="art_img" src="../assets/icon_head.png" alt="logo">
       </div>
-      <!--    introduce    -->
-      <!--   Work with me   -->
       <div class="row work">
         <img class="mine_img" src="../assets/head.png">
         <div style="margin-right: 150px">
@@ -29,8 +27,6 @@
           </div>
         </div>
       </div>
-
-      <!--  THE SEMPLICE SHOWCAS  -->
       <div class="line_view">
         <p>{{ t("show") }}</p>
         <hr>

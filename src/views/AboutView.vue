@@ -8,7 +8,7 @@
       </div>
       <div class="right_personal">
         <div class="text_border">
-          <p v-for="index in 2" v-bind:key="life + index">{{ t("life") }}</p>
+          <p v-for="index in 2" v-bind:key="index">{{ t("life") }}</p>
         </div>
         <div class="personal_info">
           <p>{{ t("name1") }}</p>
@@ -18,7 +18,6 @@
         </div>
       </div>
     </div>
-    <div class="row"></div>
     <div class="block">
       <h2>{{ t("experience") }}</h2>
       <el-timeline style="width: 10%; padding-left: 150px">
@@ -50,13 +49,13 @@ export default {
   data() {
     return {
       infos: [
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
-        { date: "2015-12-12", title: "experience", desc: "foot" },
+        { date: "2015-1-12", title: "experience", desc: "foot" },
+        { date: "2015-2-12", title: "experience", desc: "foot" },
+        { date: "2015-3-12", title: "experience", desc: "foot" },
+        { date: "2015-4-12", title: "experience", desc: "foot" },
+        { date: "2015-5-12", title: "experience", desc: "foot" },
+        { date: "2015-6-12", title: "experience", desc: "foot" },
+        { date: "2015-7-12", title: "experience", desc: "foot" },
       ],
     };
   },
