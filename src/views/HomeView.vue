@@ -166,7 +166,7 @@ export default {
 
 .top_button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 50px;
 }
 
@@ -183,6 +183,7 @@ h2 {
   margin-bottom: -10px;
   color: #ffffff;
   font-size: 16px;
+  
 }
 
 hr {

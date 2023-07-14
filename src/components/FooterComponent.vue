@@ -65,7 +65,7 @@
   .FooterComponent {
     display: flex;
     justify-content: space-around;
-    align-items: start;
+    align-items: flex-start;
     background-color: #0A0B0C;
     height: 300px;
     width: 100px;

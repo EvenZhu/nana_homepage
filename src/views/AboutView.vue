@@ -166,7 +166,7 @@ h2 {
 
 .top_button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 50px;
 }
 </style>
