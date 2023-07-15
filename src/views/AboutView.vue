@@ -32,11 +32,6 @@
           </el-card>
         </el-timeline-item>
       </el-timeline>
-      <div class="top_button">
-        <a href="/#">
-          <el-button icon="el-icon-top" circle> </el-button>
-        </a>
-      </div>
       <FooterComponent style="width: 100%; position: static; bottom: 0"></FooterComponent>
     </div>
   </div>
@@ -162,11 +157,5 @@ h2 {
   margin-bottom: 20px;
   text-align-last: center;
   color: white;
-}
-
-.top_button {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 50px;
 }
 </style>

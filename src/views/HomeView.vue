@@ -164,12 +164,6 @@ export default {
   height: 0px !important;
 }
 
-.top_button {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 50px;
-}
-
 h1 {
   margin-bottom: 10px;
   color: white;
@@ -183,7 +177,7 @@ h2 {
   margin-bottom: -10px;
   color: #ffffff;
   font-size: 16px;
-  
+
 }
 
 hr {
