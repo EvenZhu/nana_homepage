@@ -32,7 +32,7 @@
         <hr>
       </div>
       <h1>{{ t("proudly") }}</h1>
-      <router-link to="/show_case">{{ t("see") }}</router-link>
+      <router-link to="/showCase">{{ t("see") }}</router-link>
       <div class="row_center scroll" v-for="index in 3" :class="'scroll' + index" v-bind:key="'img' + index">
         <img class="img" src="../assets/auto.png">
         <img class="img" src="../assets/auto.png">

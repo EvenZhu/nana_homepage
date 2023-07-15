@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import ShowCaseView from "../views/ShowCaseView.vue"
-import OtherView from "../views/OtherView.vue"
-import ExampleView from '../views/ExampleView.vue'
+import AboutView from '../views/AboutView'
+import ShowCaseView from "../views/ShowCaseView"
+import WorksView from "../views/ShowCaseView"
+import OtherView from "../views/OtherView"
+import ExampleView from '../views/ExampleView'
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,9 +20,14 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/show_case',
-    name: 'show_case',
+    path: '/showCase',
+    name: 'showCase',
     component: ShowCaseView
+  },
+  {
+    path: '/works',
+    name: 'works',
+    component: WorksView
   },
   {
     path: '/other',

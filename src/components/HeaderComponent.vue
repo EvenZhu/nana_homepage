@@ -4,11 +4,12 @@
     <nav class="row_center">
       <router-link to="/">{{ t("home") }}</router-link>
       <router-link to="/about">{{ t("about") }}</router-link>
-      <router-link to="/show_case">{{ t("show_case") }}</router-link>
-      <router-link to="/other">{{ t("other") }}</router-link>
-      <router-link to="/example">{{ t("example") }}</router-link>
+      <router-link to="/showCase">{{ t("show_case") }}</router-link>
+      <router-link to="/works">{{ t("works") }}</router-link>
 
-      <el-select popper-class="selectFrom" v-model="value" :placeholder="placeholder()" size="small"
+      <router-link v-if="false" to="/other">{{ t("other") }}</router-link>
+      <router-link v-if="false" to="/example">{{ t("example") }}</router-link>
+      <el-select v-if="false" popper-class="selectFrom" v-model="value" :placeholder="placeholder()" size="small"
         :popper-append-to-body="false">
         <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
         </el-option>
@@ -36,6 +37,9 @@ export default {
       }],
       value: ''
     }
+  },
+  created() {
+    localStorage.setItem("locale", "zh")
   },
   watch: {
     value: function (newValue, oldValue) {
